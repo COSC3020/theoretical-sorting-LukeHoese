@@ -15,4 +15,8 @@ results you would get.
 Also give a theoretical argument for why X could or could not be correct, based
 on the complexity of the general sorting problem we covered in class.
 
+I would start out a practical test of the algorithms runtime by trying it on edge case lists, and common worst case scenario lists: reverse sorted, nearly sorted but with last element in first index, completely random, increasingly large data sets, lists with repeat elements, lists of different data types (floats, doubles, etc.), etc. I would also do intensive testing over a large set of lists, all random, to see if the run time continues to hold. 
+
+Theoretically I would immediately be incredibly skeptical, if not straight up in disbelief of such an algorithm. As we discussed in class it is impossible for a comparison based sorting algorithm to run in a time of O(n) because O(n) is only enough time for one comparison per element, which given we're only comparing two elements at a time simply cannot give enough information to consistently sort in linear time. A given list of n elements has n! permutations, which means a huge growth rate, making it impossible for an algorithm to consistently find the "sorted" permutation of a list in time linear to the amount of elements. With 2 comparisons and n! comparisons this would give a best possible algorithm of O(log2(n!)), or asymptotically simplified to O(nlog2(n)).
+
 Add your answers to this markdown file.
